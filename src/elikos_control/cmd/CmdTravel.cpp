@@ -4,7 +4,7 @@ CmdTravel::CmdTravel(ros::NodeHandle* nh, int id)
     : CmdAbs(nh, id)    
 {
     cmdPriority_ = PriorityLevel::ALWAYS_ABORTABLE;
-	cmdCode_ = CmdCode::MOVE_TO_POINT;
+	cmdCode_ = elikos_msgs::DMCmd::MOVE_TO_POINT;
 	
 	nh_->getParam("/elikos_decisionmaking/dimension_c", dimension_c_);
  	nh_->getParam("/elikos_decisionmaking/max_altitude", max_altitude_);
