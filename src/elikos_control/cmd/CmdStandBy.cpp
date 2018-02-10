@@ -4,7 +4,7 @@ CmdStandBy::CmdStandBy(ros::NodeHandle* nh, int id)
     : CmdAbs(nh, id)
 {
     cmdPriority_ = PriorityLevel::ALWAYS_ABORTABLE;
-    cmdCode_ = CmdCode::STANDBY;
+    cmdCode_ = elikos_msgs::DMCmd::STANDBY;
 }
 
 CmdStandBy::~CmdStandBy()

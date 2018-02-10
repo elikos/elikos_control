@@ -4,7 +4,7 @@ CmdTakeOff::CmdTakeOff(ros::NodeHandle* nh, int id)
     : CmdAbs(nh, id)    
 {
     cmdPriority_ = PriorityLevel::TAKEOFF_PRIORITY;
-    cmdCode_ = CmdCode::TAKEOFF;
+    cmdCode_ = elikos_msgs::DMCmd::TAKEOFF;
 
     stateSub_ = nh_->subscribe<mavros_msgs::State>("mavros/state", 10, &CmdTakeOff::stateCallBack, this);
     armingClient_ = nh_->serviceClient<mavros_msgs::CommandBool>("mavros/cmd/arming");
