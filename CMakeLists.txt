@@ -20,7 +20,7 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(OpenCV REQUIRED)
 
 catkin_package(
-  INCLUDE_DIRS include
+#  INCLUDE_DIRS include
 #  LIBRARIES elikos_tracking
  CATKIN_DEPENDS elikos_main roscpp std_msgs tf cv_bridge
 #  DEPENDS system_lib
